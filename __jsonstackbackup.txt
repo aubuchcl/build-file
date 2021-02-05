@@ -24,23 +24,45 @@
         }
       }
     },
-    "reach": {
-      "name": "reach",
+    "pub": {
+      "name": "pub",
       "image": {
-        "name": "simplews-external",
+        "name": "pub",
         "origin": {
-          "type": "docker-file",
+          "type": "docker-hub",
           "details": {
-            "url": "https://github.com/aubuchcl/build-dir-two.git",
-            "dir": "/",
-            "path": "/Dockerfile"
+            "target": "redis:latest"
           }
         }
       },
       "config": {
         "network": {
           "public": "enable",
-          "hostname": "simplews",
+          "hostname": "pub",
+          "ports": ["80:6379"]
+        },
+        "deploy": {
+          "instances": 1
+        }
+      }
+    },
+    "auth": {
+      "name": "auth",
+      "image": {
+        "name": "auth",
+        "origin": {
+          "type": "docker-hub",
+          "details": {
+            "target": "aubuchcl/mautic:latest",
+            "username": "aubuchcl",
+            "token": "f962cbce-220d-45bd-b233-ee8e7fc4d83b"
+          }
+        }
+      },
+      "config": {
+        "network": {
+          "public": "enable",
+          "hostname": "auth",
           "ports": ["80:80"]
         },
         "deploy": {
