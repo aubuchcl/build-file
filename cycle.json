@@ -1,0 +1,27 @@
+{
+  "version": "1.0",
+  "containers": {
+    "name": "demo",
+    "image": {
+      "name": "simplews",
+      "origin": {
+        "type": "docker-file",
+        "details": {
+          "url": "https://github.com/aubuchcl/build-file.git",
+          "dir": "/",
+          "path": "/Dockerfile"
+        }
+      }
+    },
+    "config": {
+      "network": {
+        "public": "enable",
+        "hostname": "simplews",
+        "ports": ["80:80"]
+      },
+      "deploy": {
+        "instances": 1
+      }
+    }
+  }
+}
