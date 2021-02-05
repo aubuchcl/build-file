@@ -1,8 +1,28 @@
 {
   "version": "1.0",
-  "containers": [
-    {
-      "name": "demo"
+  "containers": {
+    "demo": {
+      "name": "demo",
+      "image": {
+        "name": "simplews",
+        "origin": {
+          "type": "docker-file",
+          "details": {
+            "dir": "/",
+            "path": "/Dockerfile"
+          }
+        }
+      },
+      "config": {
+        "network": {
+          "public": "enable",
+          "hostname": "simplews",
+          "ports": ["80:80"]
+        },
+        "deploy": {
+          "instances": 1
+        }
+      }
     }
-  ]
+  }
 }
