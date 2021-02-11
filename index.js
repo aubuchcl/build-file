@@ -2,7 +2,7 @@ var http = require("http");
 // var environmentVars = JSON.stringify(process.env, null, 4);
 var server = http.createServer(function (request, response) {
   response.writeHead(200, { "Content-Type": "text/plain" });
-  response.end("hello world");
+  response.end("hello world changed and updated test");
   console.log("Got a connection");
 });
 server.listen(80, "::0");
