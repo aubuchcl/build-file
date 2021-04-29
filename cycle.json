@@ -2,7 +2,7 @@
   "version": "1.0",
   "containers": {
     "demo": {
-      "name": "demo",
+      "name": "changed demo image",
       "image": {
         "name": "simplews",
         "origin": {
@@ -25,7 +25,7 @@
       }
     },
     "reach": {
-      "name": "reach",
+      "name": "updated reach network settings",
       "image": {
         "name": "simplews-external",
         "origin": {
@@ -39,9 +39,31 @@
       },
       "config": {
         "network": {
-          "public": "enable",
+          "public": "disable",
           "hostname": "simplews",
           "ports": ["80:80"]
+        },
+        "deploy": {
+          "instances": 1
+        }
+      }
+    },
+    "stacktest": {
+      "name": "stacktest",
+      "image": {
+        "name": "stacktest",
+        "origin": {
+          "type": "docker-hub",
+          "details": {
+            "target": "cycleplatform/debug:no-volume"
+          }
+        }
+      },
+      "config": {
+        "network": {
+          "public": "disable",
+          "hostname": "stacktest"
+
         },
         "deploy": {
           "instances": 1
