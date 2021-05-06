@@ -8,8 +8,8 @@
         "origin": {
           "type": "docker-file",
           "details": {
-            "dir": "/",
-            "path": "/Dockerfile"
+            "context_dir": "/",
+            "build_file": "/Dockerfile"
           }
         }
       },
@@ -31,9 +31,11 @@
         "origin": {
           "type": "docker-file",
           "details": {
-            "url": "https://github.com/aubuchcl/build-dir-two.git",
-            "dir": "/",
-            "path": "/Dockerfile"
+            "repo": {
+              "url": "https://github.com/aubuchcl/build-dir-two.git"
+            },
+            "context_dir": "/",
+            "build_file": "/Dockerfile"
           }
         }
       },
