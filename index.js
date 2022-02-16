@@ -6,10 +6,10 @@ var server = http.createServer(function (request, response) {
   console.log("Got a connection");
 });
 server.listen(80, "::0");
-// server.listen(80, "0.0.0.0");
-console.log("Server running on localhost at port 80");
+
+console.log("Server running on port 80");
 console.log("this server is available via ipv4 and ipv6");
-console.log("made a change");
+console.log("made a connection");
 
 function handleExit(signal) {
   console.log(`Received ${signal}. Close my server properly.`)
