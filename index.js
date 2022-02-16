@@ -10,6 +10,7 @@ server.listen(80, "::0");
 console.log("Server running on port 80");
 console.log("this server is available via ipv4 and ipv6");
 console.log("made a connection");
+console.log("change me");
 
 function handleExit(signal) {
   console.log(`Received ${signal}. Close my server properly.`)
