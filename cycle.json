@@ -1,5 +1,60 @@
 {
   "version": "1.0",
+    "scoped_variables": [
+    {
+      "identifier": "file-type",
+      "scope": {
+        "containers": {
+          "global": false,
+          "ids": [],
+          "identifiers": [
+            "api"
+          ]
+        }
+      },
+      "access": {
+        "env_variable": null,
+        "internal_api": null,
+        "file": {
+          "path": "/etc/demo-config.json",
+          "decode": false
+        }
+      },
+      "source": {
+        "type": "raw",
+        "details": {
+          "value": "{\n  \"containerId\": \"abc123\",\n  \"instanceId\": \"xyz789\",\n  \"expectedValue\": \"READY\",\n  \"maxRuntimeMs\": 10000\n}",
+          "secret": null,
+          "blob": true
+        }
+      }
+    },
+    {
+      "identifier": "env-var-demo",
+      "scope": {
+        "containers": {
+          "global": true,
+          "ids": [],
+          "identifiers": []
+        }
+      },
+      "access": {
+        "env_variable": {
+          "key": "ENV_VAR_DEMO"
+        },
+        "internal_api": null,
+        "file": null
+      },
+      "source": {
+        "type": "raw",
+        "details": {
+          "value": "LKSJDFLJLSKDJFLKSDJFLSJDLFKJSDF",
+          "secret": null,
+          "blob": false
+        }
+      }
+    }
+  ],
   "containers": {
     "demo": {
       "name": "demo",
