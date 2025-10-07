@@ -1,54 +1,685 @@
 {
-  "version": "1.0",
-  "containers": {
-    "demo": {
-      "name": "demo",
-      "image": {
-        "name": "simplews",
-        "origin": {
-          "type": "docker-file",
-          "details": {
-            "context_dir": "/",
-            "build_file": "/Dockerfile"
-          }
-        }
-      },
-      "config": {
-        "network": {
-          "public": "enable",
-          "hostname": "simplews",
-          "ports": ["80:80"]
-        },
-        "deploy": {
-          "instances": 1
-        }
-      }
-    },
-    "reach": {
-      "name": "reach",
-      "image": {
-        "name": "simplews-external",
-        "origin": {
-          "type": "docker-file",
-          "details": {
-            "repo": {
-              "url": "https://github.com/aubuchcl/build-dir-two.git"
+    "version": "1.0",
+    "containers": {
+        "demo1": {
+            "name": "demo",
+            "image": {
+                "name": "simplews",
+                "origin": {
+                    "type": "docker-file",
+                    "details": {
+                        "context_dir": "/",
+                        "build_file": "/Dockerfile"
+                    }
+                }
             },
-            "context_dir": "/",
-            "build_file": "/Dockerfile"
-          }
-        }
-      },
-      "config": {
-        "network": {
-          "public": "enable",
-          "hostname": "simplews",
-          "ports": ["80:80"]
+            "config": {
+                "network": {
+                    "public": "enable",
+                    "hostname": "simplews",
+                    "ports": [
+                        "80:80"
+                    ]
+                },
+                "deploy": {
+                    "instances": 1
+                },
+                "resources": {
+                    "cpu": {
+                        "shares": {
+                            "limit": 1,
+                            "reserve": 1
+                        }
+                    },
+                    "ram": {}
+                }
+            }
         },
-        "deploy": {
-          "instances": 1
+        "demo2": {
+            "name": "demo",
+            "image": {
+                "name": "simplews",
+                "origin": {
+                    "type": "docker-file",
+                    "details": {
+                        "context_dir": "/",
+                        "build_file": "/Dockerfile"
+                    }
+                }
+            },
+            "config": {
+                "network": {
+                    "public": "enable",
+                    "hostname": "simplews",
+                    "ports": [
+                        "80:80"
+                    ]
+                },
+                "deploy": {
+                    "instances": 1
+                },
+                "resources": {
+                    "cpu": {
+                        "shares": {
+                            "limit": 1,
+                            "reserve": 1
+                        }
+                    },
+                    "ram": {}
+                }
+            }
+        },
+        "demo3": {
+            "name": "demo",
+            "image": {
+                "name": "simplews",
+                "origin": {
+                    "type": "docker-file",
+                    "details": {
+                        "context_dir": "/",
+                        "build_file": "/Dockerfile"
+                    }
+                }
+            },
+            "config": {
+                "network": {
+                    "public": "enable",
+                    "hostname": "simplews",
+                    "ports": [
+                        "80:80"
+                    ]
+                },
+                "deploy": {
+                    "instances": 1
+                },
+                "resources": {
+                    "cpu": {
+                        "shares": {
+                            "limit": 1,
+                            "reserve": 1
+                        }
+                    },
+                    "ram": {}
+                }
+            }
+        },
+        "demo4": {
+            "name": "demo",
+            "image": {
+                "name": "simplews",
+                "origin": {
+                    "type": "docker-file",
+                    "details": {
+                        "context_dir": "/",
+                        "build_file": "/Dockerfile"
+                    }
+                }
+            },
+            "config": {
+                "network": {
+                    "public": "enable",
+                    "hostname": "simplews",
+                    "ports": [
+                        "80:80"
+                    ]
+                },
+                "deploy": {
+                    "instances": 1
+                },
+                "resources": {
+                    "cpu": {
+                        "shares": {
+                            "limit": 1,
+                            "reserve": 1
+                        }
+                    },
+                    "ram": {}
+                }
+            }
+        },
+        "demo5": {
+            "name": "demo",
+            "image": {
+                "name": "simplews",
+                "origin": {
+                    "type": "docker-file",
+                    "details": {
+                        "context_dir": "/",
+                        "build_file": "/Dockerfile"
+                    }
+                }
+            },
+            "config": {
+                "network": {
+                    "public": "enable",
+                    "hostname": "simplews",
+                    "ports": [
+                        "80:80"
+                    ]
+                },
+                "deploy": {
+                    "instances": 1
+                },
+                "resources": {
+                    "cpu": {
+                        "shares": {
+                            "limit": 1,
+                            "reserve": 1
+                        }
+                    },
+                    "ram": {}
+                }
+            }
+        },
+        "demo6": {
+            "name": "demo",
+            "image": {
+                "name": "simplews",
+                "origin": {
+                    "type": "docker-file",
+                    "details": {
+                        "context_dir": "/",
+                        "build_file": "/Dockerfile"
+                    }
+                }
+            },
+            "config": {
+                "network": {
+                    "public": "enable",
+                    "hostname": "simplews",
+                    "ports": [
+                        "80:80"
+                    ]
+                },
+                "deploy": {
+                    "instances": 1
+                },
+                "resources": {
+                    "cpu": {
+                        "shares": {
+                            "limit": 1,
+                            "reserve": 1
+                        }
+                    },
+                    "ram": {}
+                }
+            }
+        },
+        "demo7": {
+            "name": "demo",
+            "image": {
+                "name": "simplews",
+                "origin": {
+                    "type": "docker-file",
+                    "details": {
+                        "context_dir": "/",
+                        "build_file": "/Dockerfile"
+                    }
+                }
+            },
+            "config": {
+                "network": {
+                    "public": "enable",
+                    "hostname": "simplews",
+                    "ports": [
+                        "80:80"
+                    ]
+                },
+                "deploy": {
+                    "instances": 1
+                },
+                "resources": {
+                    "cpu": {
+                        "shares": {
+                            "limit": 1,
+                            "reserve": 1
+                        }
+                    },
+                    "ram": {}
+                }
+            }
+        },
+        "demo8": {
+            "name": "demo",
+            "image": {
+                "name": "simplews",
+                "origin": {
+                    "type": "docker-file",
+                    "details": {
+                        "context_dir": "/",
+                        "build_file": "/Dockerfile"
+                    }
+                }
+            },
+            "config": {
+                "network": {
+                    "public": "enable",
+                    "hostname": "simplews",
+                    "ports": [
+                        "80:80"
+                    ]
+                },
+                "deploy": {
+                    "instances": 1
+                },
+                "resources": {
+                    "cpu": {
+                        "shares": {
+                            "limit": 1,
+                            "reserve": 1
+                        }
+                    },
+                    "ram": {}
+                }
+            }
+        },
+        "demo9": {
+            "name": "demo",
+            "image": {
+                "name": "simplews",
+                "origin": {
+                    "type": "docker-file",
+                    "details": {
+                        "context_dir": "/",
+                        "build_file": "/Dockerfile"
+                    }
+                }
+            },
+            "config": {
+                "network": {
+                    "public": "enable",
+                    "hostname": "simplews",
+                    "ports": [
+                        "80:80"
+                    ]
+                },
+                "deploy": {
+                    "instances": 1
+                },
+                "resources": {
+                    "cpu": {
+                        "shares": {
+                            "limit": 1,
+                            "reserve": 1
+                        }
+                    },
+                    "ram": {}
+                }
+            }
+        },
+        "demo10": {
+            "name": "demo",
+            "image": {
+                "name": "simplews",
+                "origin": {
+                    "type": "docker-file",
+                    "details": {
+                        "context_dir": "/",
+                        "build_file": "/Dockerfile"
+                    }
+                }
+            },
+            "config": {
+                "network": {
+                    "public": "enable",
+                    "hostname": "simplews",
+                    "ports": [
+                        "80:80"
+                    ]
+                },
+                "deploy": {
+                    "instances": 1
+                },
+                "resources": {
+                    "cpu": {
+                        "shares": {
+                            "limit": 1,
+                            "reserve": 1
+                        }
+                    },
+                    "ram": {}
+                }
+            }
+        },
+        "demo11": {
+            "name": "demo",
+            "image": {
+                "name": "simplews",
+                "origin": {
+                    "type": "docker-file",
+                    "details": {
+                        "context_dir": "/",
+                        "build_file": "/Dockerfile"
+                    }
+                }
+            },
+            "config": {
+                "network": {
+                    "public": "enable",
+                    "hostname": "simplews",
+                    "ports": [
+                        "80:80"
+                    ]
+                },
+                "deploy": {
+                    "instances": 1
+                },
+                "resources": {
+                    "cpu": {
+                        "shares": {
+                            "limit": 1,
+                            "reserve": 1
+                        }
+                    },
+                    "ram": {}
+                }
+            }
+        },
+        "demo12": {
+            "name": "demo",
+            "image": {
+                "name": "simplews",
+                "origin": {
+                    "type": "docker-file",
+                    "details": {
+                        "context_dir": "/",
+                        "build_file": "/Dockerfile"
+                    }
+                }
+            },
+            "config": {
+                "network": {
+                    "public": "enable",
+                    "hostname": "simplews",
+                    "ports": [
+                        "80:80"
+                    ]
+                },
+                "deploy": {
+                    "instances": 1
+                },
+                "resources": {
+                    "cpu": {
+                        "shares": {
+                            "limit": 1,
+                            "reserve": 1
+                        }
+                    },
+                    "ram": {}
+                }
+            }
+        },
+        "demo13": {
+            "name": "demo",
+            "image": {
+                "name": "simplews",
+                "origin": {
+                    "type": "docker-file",
+                    "details": {
+                        "context_dir": "/",
+                        "build_file": "/Dockerfile"
+                    }
+                }
+            },
+            "config": {
+                "network": {
+                    "public": "enable",
+                    "hostname": "simplews",
+                    "ports": [
+                        "80:80"
+                    ]
+                },
+                "deploy": {
+                    "instances": 1
+                },
+                "resources": {
+                    "cpu": {
+                        "shares": {
+                            "limit": 1,
+                            "reserve": 1
+                        }
+                    },
+                    "ram": {}
+                }
+            }
+        },
+        "demo14": {
+            "name": "demo",
+            "image": {
+                "name": "simplews",
+                "origin": {
+                    "type": "docker-file",
+                    "details": {
+                        "context_dir": "/",
+                        "build_file": "/Dockerfile"
+                    }
+                }
+            },
+            "config": {
+                "network": {
+                    "public": "enable",
+                    "hostname": "simplews",
+                    "ports": [
+                        "80:80"
+                    ]
+                },
+                "deploy": {
+                    "instances": 1
+                },
+                "resources": {
+                    "cpu": {
+                        "shares": {
+                            "limit": 1,
+                            "reserve": 1
+                        }
+                    },
+                    "ram": {}
+                }
+            }
+        },
+        "demo15": {
+            "name": "demo",
+            "image": {
+                "name": "simplews",
+                "origin": {
+                    "type": "docker-file",
+                    "details": {
+                        "context_dir": "/",
+                        "build_file": "/Dockerfile"
+                    }
+                }
+            },
+            "config": {
+                "network": {
+                    "public": "enable",
+                    "hostname": "simplews",
+                    "ports": [
+                        "80:80"
+                    ]
+                },
+                "deploy": {
+                    "instances": 1
+                },
+                "resources": {
+                    "cpu": {
+                        "shares": {
+                            "limit": 1,
+                            "reserve": 1
+                        }
+                    },
+                    "ram": {}
+                }
+            }
+        },
+        "demo16": {
+            "name": "demo",
+            "image": {
+                "name": "simplews",
+                "origin": {
+                    "type": "docker-file",
+                    "details": {
+                        "context_dir": "/",
+                        "build_file": "/Dockerfile"
+                    }
+                }
+            },
+            "config": {
+                "network": {
+                    "public": "enable",
+                    "hostname": "simplews",
+                    "ports": [
+                        "80:80"
+                    ]
+                },
+                "deploy": {
+                    "instances": 1
+                },
+                "resources": {
+                    "cpu": {
+                        "shares": {
+                            "limit": 1,
+                            "reserve": 1
+                        }
+                    },
+                    "ram": {}
+                }
+            }
+        },
+        "demo17": {
+            "name": "demo",
+            "image": {
+                "name": "simplews",
+                "origin": {
+                    "type": "docker-file",
+                    "details": {
+                        "context_dir": "/",
+                        "build_file": "/Dockerfile"
+                    }
+                }
+            },
+            "config": {
+                "network": {
+                    "public": "enable",
+                    "hostname": "simplews",
+                    "ports": [
+                        "80:80"
+                    ]
+                },
+                "deploy": {
+                    "instances": 1
+                },
+                "resources": {
+                    "cpu": {
+                        "shares": {
+                            "limit": 1,
+                            "reserve": 1
+                        }
+                    },
+                    "ram": {}
+                }
+            }
+        },
+        "demo18": {
+            "name": "demo",
+            "image": {
+                "name": "simplews",
+                "origin": {
+                    "type": "docker-file",
+                    "details": {
+                        "context_dir": "/",
+                        "build_file": "/Dockerfile"
+                    }
+                }
+            },
+            "config": {
+                "network": {
+                    "public": "enable",
+                    "hostname": "simplews",
+                    "ports": [
+                        "80:80"
+                    ]
+                },
+                "deploy": {
+                    "instances": 1
+                },
+                "resources": {
+                    "cpu": {
+                        "shares": {
+                            "limit": 1,
+                            "reserve": 1
+                        }
+                    },
+                    "ram": {}
+                }
+            }
+        },
+        "demo19": {
+            "name": "demo",
+            "image": {
+                "name": "simplews",
+                "origin": {
+                    "type": "docker-file",
+                    "details": {
+                        "context_dir": "/",
+                        "build_file": "/Dockerfile"
+                    }
+                }
+            },
+            "config": {
+                "network": {
+                    "public": "enable",
+                    "hostname": "simplews",
+                    "ports": [
+                        "80:80"
+                    ]
+                },
+                "deploy": {
+                    "instances": 1
+                },
+                "resources": {
+                    "cpu": {
+                        "shares": {
+                            "limit": 1,
+                            "reserve": 1
+                        }
+                    },
+                    "ram": {}
+                }
+            }
+        },
+        "demo20": {
+            "name": "demo",
+            "image": {
+                "name": "simplews",
+                "origin": {
+                    "type": "docker-file",
+                    "details": {
+                        "context_dir": "/",
+                        "build_file": "/Dockerfile"
+                    }
+                }
+            },
+            "config": {
+                "network": {
+                    "public": "enable",
+                    "hostname": "simplews",
+                    "ports": [
+                        "80:80"
+                    ]
+                },
+                "deploy": {
+                    "instances": 1
+                },
+                "resources": {
+                    "cpu": {
+                        "shares": {
+                            "limit": 1,
+                            "reserve": 1
+                        }
+                    },
+                    "ram": {}
+                }
+            }
         }
-      }
     }
-  }
 }
